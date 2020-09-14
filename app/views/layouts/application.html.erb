@@ -12,6 +12,23 @@
   <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+    <nav class="navbar">
+      <div class="navbar-brand">
+      <%= link_to root_path, class: "navbar-item" do %>
+        <h1 class="title">Stackoverflow</h1>
+      <% end %>  
+      </div>
+      <div id="navbarExample" class="navbar-menu">
+        <div class="navbar-end">
+          <div class="field">
+            <p class="control">
+              <%= link_to 'New Question', new_question_path, class: "button" %>
+            </p>
+          </div>
+        </div>
+      </div>
+    </nav>
+
     <%= yield %>
   </body>
 </html>
